@@ -1,0 +1,37 @@
+<div>
+    <h1>Detalle de {{title}}</h1>
+    <table id="productsTable">
+        <thead>
+            <tr>
+                <th><strong>Producto</strong></th>
+                <th><strong>Descripción</strong></th>
+                <th><strong>Código</strong></th>
+                <th><strong>Precio</strong></th>
+                <th><strong>Stock</strong></th>
+                <th><strong>Categoría</strong></th>
+                <th><strong>Miniatura</strong></th>
+                <th><strong>Agregar al Carrito</strong></th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <form action="/api/carts/63d6fd0378064b2778f5223a/products/{{_id}}" method="post">
+                    <td>{{title}}</td>
+                    <td>{{description}}</td>
+                    <td>{{code}}</td>
+                    <td>{{price}}</td>
+                    <td>{{stock}}</td>
+                    <td>{{category}}</td>
+                    <td>{{thumbnail}}</td>
+                    <td><input type="submit" value="Agregar al Carrito"></td>
+                </form>
+            </tr>
+        </tbody>
+    </table>
+
+    <p>El carrito está harcodeado al _id: 63d6fd0378064b2778f5223a</p>
+
+    <div>
+        <a href="/api/products?page=1">Inicio</a>
+    </div>
+</div>

@@ -1,0 +1,46 @@
+<div>
+    <h1>Listado de Productos</h1>
+    <table id="productsTable">
+        <thead>
+            <tr>
+                <th><strong>Producto</strong></th>
+                <th><strong>Descripción</strong></th>
+                <th><strong>Código</strong></th>
+                <th><strong>Precio</strong></th>
+                <th><strong>Stock</strong></th>
+                <th><strong>Categoría</strong></th>
+                <th><strong>Miniatura</strong></th>
+                <th><strong>Detalles</strong></th>
+                <th><strong>Agregar al Carrito</strong></th>
+            </tr>
+        </thead>
+        <tbody>
+            {{#each products.docs}}
+            <tr>
+                <form action="/api/carts/63d6fd0378064b2778f5223a/products/{{this._id}}" method="post">
+                    <td>{{this.title}}</td>
+                    <td>{{this.description}}</td>
+                    <td>{{this.code}}</td>
+                    <td>{{this.price}}</td>
+                    <td>{{this.stock}}</td>
+                    <td>{{this.category}}</td>
+                    <td>{{this.thumbnail}}</td>
+                    <td><a href="/products/{{this._id}}">Detalle</a></td>
+                    <td><input type="submit" value="Agregar al Carrito"></td>
+                </form>
+            </tr>
+            {{/each}}
+        </tbody>
+    </table>
+
+    <p>El carrito está harcodeado al _id: 63d6fd0378064b2778f5223a</p>
+
+    <div>
+        {{#if products.hasPrevPage}}
+            <a href="{{products.prevLink}}">Anterior</a>
+        {{/if}}
+        {{#if products.hasNextPage}}
+            <a href="{{products.nextLink}}">Siguiente</a>
+        {{/if}}
+    </div>
+</div>
