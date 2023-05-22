@@ -66,7 +66,7 @@ app.use(passport.initialize())
 app.use(passport.session())
 
 // Corriendo el servidor
-const httpServer = app.listen(8080, () => console.log('Server listening...'))
+const httpServer = app.listen(config.PORT, () => console.log(`Server listening...${config.PORT}`))
 const socketServer = new Server(httpServer)
 httpServer.on("error", (e) => req.logger.error(`ERROR: ${e}`))
 

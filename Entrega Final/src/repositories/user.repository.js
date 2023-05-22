@@ -44,7 +44,7 @@ export default class UserRepository {
                 <h1>Usuerio eliminado</h1>
                 <br>
                 <p>Debido a no loguearse a la cuenta en los últimos 2 días, el usuario se ha eliminado.</p>
-                <p>Para seguir usando la plataforma, volvé a registrarte haciendo click en este <a href="http://localhost:8080/api/session/register">link</a></p>
+                <p>Para seguir usando la plataforma, volvé a registrarte haciendo click en este <a href="https://entrega-final-coder-backend-production.up.railway.app/api/session/register">link</a></p>
             </div>
         `
 

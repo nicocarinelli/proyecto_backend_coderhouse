@@ -10,8 +10,8 @@ export const createPreference = async (req, res) => {
 			}
 		],
 		back_urls: {
-			"success": "http://localhost:8080/",
-			"failure": "http://localhost:8080/",
+			"success": "https://entrega-final-coder-backend-production.up.railway.app/",
+			"failure": "https://entrega-final-coder-backend-production.up.railway.app/",
 			"pending": "",
 		},
 		auto_return: "approved",

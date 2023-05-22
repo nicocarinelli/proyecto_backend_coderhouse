@@ -10,5 +10,6 @@ export default {
     envLogger: process.env.ENV_LOGGER,
     mercadoPagoToken: process.env.ACCESS_TOKEN_MERCADOPAGO,
     mailUser: process.env.MAIL_USER,
-    mailPass: process.env.MAIL_PASS
+    mailPass: process.env.MAIL_PASS,
+    PORT: process.env.PORT
 }
